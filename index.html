@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class = "header" id="header">
+        <nav class = "main-menu">
+        <ul class = "nav-list">
+            <li class="nav-item">"kjuj"</li>
+            <li class="nav-item">Главная</li>
+            <li class="nav-item">Услуги</li>
+            <li class="nav-item">Цены</li>
+            <li class="nav-item">О компании</li>
+            <li class="nav-item">Контакты</li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section" >
+            <div class="main-container">
+                <div class="text-part">
+            <h1>ПРОФЕССИОНАЛЬНОЕ АСФАЛЬТИРОВАНИЕ В МИНСКЕ И ОБЛАСТИ</h1>
+            <p>Полный комплекс работ по укладке асфальта: от подготовки основания до сдачи объекта «под ключ». Гарантия на все виды работ до 3 лет.</p>
+                </div>
+                <div class="img-part">
+                    <img src="assets/img/scale.jpeg" alt="заказать асфальтирование" id="img1">
+                </div>
+            </div>
+        </section>
+        <section class="services-container">
+            <h2>Услуги</h2>
+            <div class="services-items">
+                <div class="services-item">srhn</div>
+                <div class="services-item">zfhznz</div>
+                <div class="services-item">zdg</div>
+                <div class="services-item">zdgg</div>
+                 </div>
+                <h3>О нас</h3>
+                <pre class="prell">
+
+**«Ваше Название»** — это современная, динамично развивающаяся компания, которая уже более [X] лет является надежным партнером в сфере дорожного строительства и благоустройства территорий в Минске и Минской области.
+
+Наша миссия — создавать качественное, долговечное и безопасное дорожное покрытие, которое преображает пространство вокруг и делает жизнь людей комфортнее. Мы уверены, что хорошие дороги — это не просто инфраструктура, это лицо города и показатель качества жизни.
+
+#### **Наши принципы работы:**
+
+*   **Качество превыше всего.** Мы строго соблюдаем все требования ГОСТ и СНиП, используем только проверенные материалы и современную технику. На все работы предоставляется гарантия до [2-3] лет.
+*   **Ответственный подход.** Мы несем полную ответственность за каждый этап: от геодезической разметки и подготовки основания до финишной укатки асфальта. Мы не экономим на материалах и технологиях, потому что строим для людей и на decades.
+*   **Скорость и четкость.** Налаженные процессы и собственный парк специализированной техники (асфальтоукладчики, вибрационные и гладковальцовые катки, самосвалы) позволяют нам выполнять работы оперативно и сдавать объекты точно в срок.
+*   **Прозрачность и честность.** Мы всегда подробно консультируем клиентов, предоставляем детальную смету без скрытых доплат и заключаем официальный договор.
+
+#### **Почему нам доверяют?**
+
+*   **Опытная команда.** Нашими специалистами накоплен многолетний опыт работы как с частными заказчиками, так и с крупными коммерческими и государственными объектами.
+*   **Собственная техника и материалы.** Мы контролируем весь процесс от производства асфальтобетонной смеси на собственном АБЗ до ее укладки, что гарантирует высочайшее качество итогового покрытия.
+*   **Комплексные решения.** Мы предлагаем услуги «под ключ»: от демонтажа старого покрытия и вывоза мусора до устройства нового асфальтового полотна с нанесением разметки.
+*   **Индивидуальный подход.** Мы понимаем, что каждый проект уникален. Поэтому мы всегда внимательно слушаем пожелания клиента и предлагаем оптимальное решение под его задачи и бюджет.
+
+Мы гордимся тем, что наши дороги, парковки, дворы и площадки служат годами, не требуя ремонта. **«Ваше Название»** — это выбор тех, кто ценит надежность, качество и профессиональный сервис.
+
+**Обращайтесь, и мы сделаем вашу территорию идеальной!**</pre>
+        </section>
+    </main>
+    <footer class="foot">
+        <div class="footer-items">
+            <div class="footer-item">2025 "асфальт.бел"</div>
+            <div class="footer-item" id="massengers">
+                <li>Мы в соц сетях</li>
+                <li>будет ссылка на тг</li>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+    `;
+    
+    const header = document.querySelector('.header');
+    const navList = document.querySelector('.nav-list');
+    header.appendChild(menuToggle);
+    
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+    
+    // Скролл эффект
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Закрытие меню при клике на пункт
+    document.querySelectorAll('.nav-item:not(:first-child)').forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                menuToggle.classList.remove('active');
+                navList.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
+</html>
