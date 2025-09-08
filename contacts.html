@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+         <header class = "header" id="header">
+     <nav class = "main-menu">
+     <ul class = "nav-list">
+         <li class="nav-item"><a href="index.html#main"><img src="assets\img\icons8-дорожный-каток-50.png" alt="Дорожный каток иконка от Icons8"></a></li>
+         <li class="nav-item"><a href="index.html#main">Главная</a></li>
+         <li class="nav-item"><a href="services.html" >Цены</a></li>
+         <li class="nav-item"><a href="about.html">О компании</a></li>
+         <li class="nav-item"><a href="contacts.html">Контакты</a></li>
+     </ul>
+     </nav>
+ </header>
+ <p>jghnahbavlfvn</p>
+     <footer class="foot">
+    <div class="footer-conteiner">
+        <div class="footer-item">
+            <h3>Контакты</h3>
+            <ul>
+                <li>📞 +375(29)674-40-74</li>
+                <li>✉️ TSP-73@INBOX.RU </li>
+                <li>📍 Минск, ул. Голодеда, 53-1-96</li>
+            </ul>
+        </div>
+        
+        <div class="footer-item">
+            <h3>Информация</h3>
+            <ul>
+                <li>Тулько Сергей Петрович </li>
+                <li>УНП 191732555</li>
+            </ul>
+        </div>
+        
+        <div class="footer-item">
+            <h3>Режим работы</h3>
+            <ul>
+                <li>Мы работаем</li>
+                <li>24/7</li>
+            </ul>
+        </div>
+        
+        <div class="footer-item">
+            <h3>Соцсети</h3>
+            <div style="font-size: 24px; margin-top: 10px;">
+                <span style="margin: 0 10px; cursor: pointer;">📱</span>
+                <span style="margin: 0 10px; cursor: pointer;">💬</span>
+                <span style="margin: 0 10px; cursor: pointer;">📸</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>2025</p>
+    </div>
+</footer>
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+    `;
+    
+    const header = document.querySelector('.header');
+    const navList = document.querySelector('.nav-list');
+    header.appendChild(menuToggle);
+    
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+    
+    // Скролл эффект
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Закрытие меню при клике на пункт
+    document.querySelectorAll('.nav-item:not(:first-child)').forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                menuToggle.classList.remove('active');
+                navList.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
