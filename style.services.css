@@ -60,7 +60,7 @@ main > section:first-child {
 .services-table2 td:last-child {
     text-align: center;
     font-weight: bold;
-    color: ;
+    color: #2c3e50;
     font-size: 18px;
 }
 @media (max-width: 768px) {
