@@ -60,8 +60,11 @@ main > section:first-child {
 .services-table2 td:last-child {
     text-align: center;
     font-weight: bold;
-    color: #2c3e50;
+    color: #ffffff;
     font-size: 18px;
+}
+#td{
+    color: #555;
 }
 @media (max-width: 768px) {
     .services-table1, .services-table2 {

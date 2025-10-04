@@ -2,6 +2,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family:"Roboto Flex", serif;
+            font-style: normal;
         }
 a{
     color: inherit;
@@ -40,15 +42,16 @@ a{
     list-style: none;
     height: 70px;
 }
-
 .nav-item {
     position: relative;
 }
 
 .nav-item:first-child {
     font-weight: 700;
+    display: flex;
+    align-items: center;
     color: #2c3e50;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-right: auto;
 }
 
@@ -377,7 +380,7 @@ a{
 }
 
 .services-container pre {
-    background: #f8f9fa;
+    background: #f2f4f7;
     padding: 40px;
     border-radius: 15px;
     border-left: 5px solid #34495E;
@@ -386,7 +389,7 @@ a{
     font-family: 'Arial', sans-serif;
     line-height: 1.8;
     color: #2c3e50;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 25px 25px rgba(0,0,0,0.08);
     margin: 20px 0;
 }
 
@@ -407,7 +410,6 @@ a{
     position: relative;
 }
 .prell:before {
-    content: '•';
     color: #34495E;
     font-weight: bold;
     display: inline-block;
